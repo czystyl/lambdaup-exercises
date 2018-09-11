@@ -2,7 +2,7 @@
 'use strict';
 
 
-console.log("\n__START__");
+console.log("\n__  Exercise 1  __");
 
 var hello = "Helo!";
 

@@ -1,9 +1,9 @@
 /*
   *
-  Bindngs let
+  Exercise 1
   *
  */
-Js.log("\n__START__");
+Js.log("\n__  Exercise 1  __");
 /* #1 */
 let hello = "Helo!";
 
