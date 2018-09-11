@@ -1,14 +1,11 @@
-/*
-  *
-  Exercise 2
-  *
- */
-Js.log("\n__Exercise 2__");
+/* Exercise 2 */
+Js.log("\n~~");
+
 /*
   #1 Variants
  */
 
-type variants =
+type answer =
   | Yes
   | No;
 
@@ -20,25 +17,27 @@ let yourAnswer = Yes;
   #2 Variant constructor
  */
 
-type time =
-  | Days(int)
-  | Weeks(int)
-  | Months(int);
+type conference =
+  | Name(string)
+  | Duration(int)
+  | City(string);
 
-let conferenceDuration = Days(1);
+let conferenceName = Name("LambdaUp");
+
+let conferenceDuration = Duration(20);
 
 /*
   #3 Parameterized type
  */
 
-type points('a) = ('a, 'a, string);
+type zone('a, 'b) = ('a, 'a, 'b);
 
-let xyFloat: points(float) = (1.2, 1.2, "my custom string");
+let venue: zone(int, float) = (10, 40, 2.2);
 
-let xyInt: points(int) = (2, 1, "end");
+let tropical: zone(float, int) = (23.6, 18.7, 1);
 
-/* Js.log(xyFloat); */
-/* Js.log(xyInt); */
+/* Js.log(venue);
+   Js.log(tropical); */
 
 /*
   #4 Optional type!
@@ -54,56 +53,47 @@ let youKnowReasonML = Some("Yes, I know!");
   #5 Pattern Matching!
  */
 
-type answer =
-  | Yes
-  | No;
+type level =
+  | Low
+  | Medium
+  | High;
 
-let question = ans =>
-  switch (ans) {
-  | Yes => "Yes, of course!"
-  | No => "No way!"
+type language =
+  | OCaml
+  | ReasonML
+  | Nothing;
+
+let checkKnowledge = (knowledge, lang) =>
+  switch (knowledge, lang) {
+  | (Low, Nothing) => "nobody"
+  | (Low, OCaml | ReasonML) => "Junior +"
+  | (Medium, OCaml | ReasonML) => "Medium knowledge"
+  | (High, OCaml) => "Wizard OCaml"
+  | (High, _) => "Wizard"
+  | _ => "Not matched"
   };
 
-/* Js.log("#5 Your answer is: " ++ question(Yes)); */
-/* Js.log("#4 Your answer is: " ++ question(No)); */
-
-type prize =
-  | Gold(int)
-  | Cash(float);
-
-let checkPrize = p =>
-  switch (p) {
-  | Gold(count) => string_of_int(count) ++ " gold coin"
-  /* | Cash(count) => string_of_float(count) ++ " $$$" */
-  | _ => "???"
-  };
-
-Js.log("#6 First win: " ++ checkPrize(Cash(123.2)));
-Js.log("#7 Second win: " ++ checkPrize(Gold(123)));
-
-let whatDoYouDo = (~name: string, ~profession=?, ()) =>
-  "Welcome "
-  ++ name
-  ++ (
-    switch (profession) {
-    | Some(a) => " I'm a " ++ a
-    | None => ""
-    }
-  );
-
-Js.log("#8 " ++ whatDoYouDo(~name="ReasonML", ~profession="programmer", ()));
-Js.log("#9 " ++ whatDoYouDo(~name="oCaml", ()));
+/* Js.log(checkKnowledge(Low, Nothing));
+   Js.log(checkKnowledge(Low, OCaml));
+   Js.log(checkKnowledge(High, OCaml));
+   Js.log(checkKnowledge(Medium, Nothing)); */
 
 /*
- type howFarWeAreFromHome =
-   | Coordinates(float, float)
-   | Distance(float)
-   | SpacePoint(float, float, int);
+  #6 Recursive Functions - FACTORIAL
+ */
 
- let calculate = (howFar: howFarWeAreFromHome, home: option(string)) =>
-   switch (howFar, home) {
-   | home => "we have home"
-   | _ => "elo"
-   };
+exception BelowZero;
 
- Js.log(calculate(Distance(15.0))); */
+open Exercise1;
+
+let factorial = num => {
+  let rec calculate = (i, acc) =>
+    switch (num) {
+    | num when i > num => acc
+    | _ => calculate(Utils.(sum(i, 1)), multiplication(acc, i))
+    };
+
+  calculate(1, 1);
+};
+
+Js.log(factorial(5));
