@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Exercises
 
 ## EX 1
@@ -40,12 +41,30 @@ npm run ex2
 
 ## Build
 
+=======
+# Basic Reason Template
+
+Hello! This project allows you to quickly get started with Reason and BuckleScript. If you wanted a more sophisticated version, try the `react` template (`bsb -theme react -init .`).
+
+# Build
+>>>>>>> master
 ```
 npm run build
 ```
 
+<<<<<<< HEAD
 ## Build + Watch
+=======
+# Build + Watch
+>>>>>>> master
 
 ```
 npm run start
 ```
+<<<<<<< HEAD
+=======
+
+
+# Editor
+If you use `vscode`, Press `Windows + Shift + B` it will build automatically
+>>>>>>> master
