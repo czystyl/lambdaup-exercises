@@ -15,7 +15,7 @@ let message = {
 /* Js.log("#2 " ++ message); */
 
 /*
- Typing
+ #3 Typing
  */
 /*
   let
@@ -26,7 +26,7 @@ type carType = string;
 let car: carType = "Ferrari";
 
 /*
- Record
+ #4 Record
  */
 
 type car = {
@@ -45,12 +45,12 @@ let laFerrari = {
   electric: true,
 };
 
-/* Js.log("#3 Serial number: " ++ laFerrari.serialNumber);
+/* Js.log("#4 Serial number: " ++ laFerrari.serialNumber);
    Js.log("#4 Hours power: " ++ string_of_int(laFerrari.hours) ++ " KM");
-   Js.log("#5 V-max: " ++ string_of_float(laFerrari.maxSpeed) ++ " km/h"); */
+   Js.log("#4 V-max: " ++ string_of_float(laFerrari.maxSpeed) ++ " km/h"); */
 
 /*
- Array
+ #5 Array
  */
 let names = [|"Luke", "Mat", "Souhe"|];
 
@@ -59,14 +59,14 @@ let numberArr: array(int) = [|1, 2, 3|];
 /* ArrayLabels.iteri(
      ~f=
        (index, name) => {
-         Js.log(string_of_int(index + 1) ++ "Welcome @" ++ name);
+         Js.log("#5 "++string_of_int(index + 1) ++ "Welcome @" ++ name);
          ();
        },
      names,
    ); */
 
 /*
- Tuple
+ #5 Tuple
  */
 
 let cityAndStreet = ("Prague", "Kasztanowa", 40);
@@ -83,7 +83,7 @@ let (city, street, number) = cityAndStreet;
    ); */
 
 /*
- List
+ #7 List
  */
 
 let numberList = [1, 2, 3];
@@ -93,7 +93,7 @@ let cityList = ["Prague", "Wroclaw", "Paris"];
 /* ArrayLabels.iteri(
      ~f=
        (index, name) => {
-         Js.log("" ++ string_of_int(index + 1) ++ ". Welcome " ++ name ++ "!");
+         Js.log("#7 " ++ string_of_int(index + 1) ++ ". Welcome " ++ name ++ "!");
          ();
        },
      ArrayLabels.of_list(cityList),
@@ -119,6 +119,6 @@ let multi9 = multiplicationLab(~x=9);
 let multi5 = multiplication(5);
 
 /* Js.log("#9 5*2=" ++ string_of_int(multi5(2))); */
-/* Js.log("#10 9*2.0=" ++ string_of_int(multi9(~y=2.0))); */
+/* Js.log("#9 9*2.0=" ++ string_of_int(multi9(~y=2.0))); */
 
 Js.log("~~");

@@ -14,7 +14,7 @@ let yourAnswer = Yes;
 /* Js.log2(yourAnswer == Yes, No == yourAnswer); */
 
 /*
-  #2 Variant constructor
+  #2 Constructor variant
  */
 
 type conference =
@@ -40,7 +40,7 @@ let tropical: zone(float, int) = (23.6, 18.7, 1);
    Js.log(tropical); */
 
 /*
-  #4 Optional type!
+  #4 Optional type
  */
 
 type option('a) =
@@ -53,7 +53,7 @@ let youKnowReasonML = Some("Yes, I know!");
   #5 Pattern Matching!
  */
 
-type level =
+type knowledgeLevel =
   | Low
   | Medium
   | High;
