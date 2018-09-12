@@ -79,9 +79,49 @@ let checkKnowledge = (knowledge, lang) =>
    Js.log(checkKnowledge(Medium, Nothing)); */
 
 /*
-  #6 Recursive Functions - FACTORIAL
+ #7 Array / List
  */
 
+/* ArrayLabels.mapi(
+     ~f=
+       (index, name) => {
+         Js.log("#4 " ++ string_of_int(index + 1) ++ ". Welcome @" ++ name);
+         ();
+       },
+     Exercise1.names,
+   );
+
+   ListLabels.mapi(
+     ~f=
+       (index, name) => {
+         Js.log(
+           "#6 " ++ string_of_int(index + 1) ++ ". Welcome " ++ name ++ "!",
+         );
+         ();
+       },
+     Exercise1.cityList,
+   ); */
+
+/*
+  #8 Pipe operator
+ */
+
+/* Exercise1.names
+   |> ArrayLabels.mapi(~f=(index, name) =>
+        string_of_int(index + 1) ++ ". Welcome " ++ name ++ "!"
+      )
+   |> Js.log;
+
+   Exercise1.cityList
+   |> ArrayLabels.of_list
+   |> ArrayLabels.mapi(~f=(index, name) =>
+        string_of_int(index + 1) ++ ". Welcome " ++ name ++ "!"
+      )
+   |> Js.log; */
+
+/*
+  #9 Recursive Functions - FACTORIAL
+ */
 open Exercise1;
 
 let factorial = num => {
@@ -94,4 +134,4 @@ let factorial = num => {
   calculate(1, 1);
 };
 
-Js.log(factorial(5));
+/* Js.log(factorial(5)); */

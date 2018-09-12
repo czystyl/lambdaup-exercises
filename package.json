@@ -5,12 +5,8 @@
     "build": "bsb -make-world",
     "start": "bsb -make-world -w",
     "clean": "bsb -clean-world",
-<<<<<<< HEAD
     "ex1": "nodemon src/Exercise1.bs.js -q",
     "ex2": "nodemon src/Exercise2.bs.js -q"
-=======
-    "ex1": "nodemon src/Exercise1.bs.js -q"
->>>>>>> master
   },
   "keywords": [
     "BuckleScript"

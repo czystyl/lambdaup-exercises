@@ -4,13 +4,8 @@
   "name": "ex1",
   "version": "0.1.0",
   "sources": {
-<<<<<<< HEAD
     "dir": "src",
     "subdirs": true
-=======
-    "dir" : "src",
-    "subdirs" : true
->>>>>>> master
   },
   "package-specs": {
     "module": "commonjs",
@@ -18,17 +13,10 @@
   },
   "suffix": ".bs.js",
   "bs-dependencies": [
-<<<<<<< HEAD
     // add your dependencies here. You'd usually install them normally through `npm install my-dependency`. If my-dependency has a bsconfig.json too, then everything will work seamlessly.
   ],
   "warnings": {
     "error": "+101"
-=======
-      // add your dependencies here. You'd usually install them normally through `npm install my-dependency`. If my-dependency has a bsconfig.json too, then everything will work seamlessly.
-  ],
-  "warnings": {
-    "error" : "+101"
->>>>>>> master
   },
   "namespace": true,
   "refmt": 3

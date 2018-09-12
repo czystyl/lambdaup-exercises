@@ -4,7 +4,6 @@
 var Block = require("bs-platform/lib/js/block.js");
 var Utils$Ex1 = require("./Utils.bs.js");
 var Exercise1$Ex1 = require("./Exercise1.bs.js");
-var Caml_exceptions = require("bs-platform/lib/js/caml_exceptions.js");
 
 console.log("\n~~");
 
@@ -32,8 +31,6 @@ function checkKnowledge(knowledge, lang) {
   }
 }
 
-var BelowZero = Caml_exceptions.create("Exercise2-Ex1.BelowZero");
-
 function factorial(num) {
   var _i = 1;
   var _acc = 1;
@@ -49,8 +46,6 @@ function factorial(num) {
     }
   };
 }
-
-console.log(factorial(5));
 
 var yourAnswer = /* Yes */0;
 
@@ -79,6 +74,5 @@ exports.venue = venue;
 exports.tropical = tropical;
 exports.youKnowReasonML = youKnowReasonML;
 exports.checkKnowledge = checkKnowledge;
-exports.BelowZero = BelowZero;
 exports.factorial = factorial;
 /*  Not a pure module */
