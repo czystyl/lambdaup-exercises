@@ -47,7 +47,7 @@ type option('a) =
   | None
   | Some('a);
 
-let youKnowReasonML = Some("Yes, I know!");
+let youKnowReasonML: option('a) = Some("Yes, I know!");
 
 /*
   #5 Pattern Matching!
@@ -81,8 +81,6 @@ let checkKnowledge = (knowledge, lang) =>
 /*
   #6 Recursive Functions - FACTORIAL
  */
-
-exception BelowZero;
 
 open Exercise1;
 
