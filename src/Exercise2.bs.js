@@ -2,8 +2,8 @@
 'use strict';
 
 var Block = require("bs-platform/lib/js/block.js");
+var Curry = require("bs-platform/lib/js/curry.js");
 var Utils$Ex1 = require("./Utils.bs.js");
-var Exercise1$Ex1 = require("./Exercise1.bs.js");
 
 console.log("\n~~");
 
@@ -40,7 +40,7 @@ function factorial(num) {
     if (i > num) {
       return acc;
     } else {
-      _acc = Exercise1$Ex1.multiplication(acc, i);
+      _acc = Curry._2(Utils$Ex1.$$Math[/* multi */0], acc, i);
       _i = Utils$Ex1.sum(i, 1);
       continue ;
     }
@@ -67,12 +67,15 @@ var tropical = /* tuple */[
 
 var youKnowReasonML = /* Some */["Yes, I know!"];
 
+var youDontKnowReasonML = /* None */0;
+
 exports.yourAnswer = yourAnswer;
 exports.conferenceName = conferenceName;
 exports.conferenceDuration = conferenceDuration;
 exports.venue = venue;
 exports.tropical = tropical;
 exports.youKnowReasonML = youKnowReasonML;
+exports.youDontKnowReasonML = youDontKnowReasonML;
 exports.checkKnowledge = checkKnowledge;
 exports.factorial = factorial;
 /*  Not a pure module */

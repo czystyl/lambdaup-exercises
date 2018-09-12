@@ -49,6 +49,8 @@ type option('a) =
 
 let youKnowReasonML: option('a) = Some("Yes, I know!");
 
+let youDontKnowReasonML: option('a) = None;
+
 /*
   #5 Pattern Matching!
  */
@@ -122,13 +124,13 @@ let checkKnowledge = (knowledge, lang) =>
 /*
   #9 Recursive Functions - FACTORIAL
  */
-open Exercise1;
+open Utils;
 
 let factorial = num => {
   let rec calculate = (i, acc) =>
     switch (num) {
     | num when i > num => acc
-    | _ => calculate(Utils.(sum(i, 1)), multiplication(acc, i))
+    | _ => calculate(sum(i, 1), Math.multi(acc, i))
     };
 
   calculate(1, 1);

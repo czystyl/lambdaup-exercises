@@ -82,18 +82,22 @@ let multiplication = (x, y) => x * y;
 
 /* Js.log("#7 5*5=" ++ string_of_int(multiplication(5, 5))); */
 
+/*
+ #8 Functions - labeled arguments
+ */
+
 let multiplicationLab = (~x: int, ~y: float) => x * int_of_float(y);
 
 /* Js.log("#7 2*2.0=" ++ string_of_int(multiplicationLab(~x=2, ~y=2.0))); */
 
 /*
- #8 Currying
+ #9 Currying
  */
 
 let multi9 = multiplicationLab(~x=9);
 let multi5 = multiplication(5);
 
-/* Js.log("#8 5*2=" ++ string_of_int(multi5(2))); */
-/* Js.log("#8 9*2.0=" ++ string_of_int(multi9(~y=2.0))); */
+/* Js.log("#9 5*2=" ++ string_of_int(multi5(2))); */
+/* Js.log("#9 9*2.0=" ++ string_of_int(multi9(~y=2.0))); */
 
 Js.log("~~");
