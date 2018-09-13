@@ -26,10 +26,10 @@
    - Create a variant of knowledge level e.g. `Low`, `Medium` and `High`
    - Create a variant of three programming languages that you like
    - Create a function which accepts 2 arguments (knowledge and language) and try to match all cases - if it possible ;)
-6. Create separate modules called `Utils` for the `sum` function, try different approaches [DOC](https://reasonml.github.io/docs/en/module)
+6. Create a separate module called `Utils` for the `sum` function, try different approaches [DOC](https://reasonml.github.io/docs/en/module)
 7. Get list/array and try to display each element in the console [API](https://reasonml.github.io/api/ArrayLabels.html)
 8. Refactor previous map/iter and use `pipe` operator and show output in the console [API](https://reasonml.github.io/api/Pervasives.html#6_Compositionoperators)
-9. Try to write functions that solve the factorial algorithm (5! = 5\*4\*3\*2\*1 = 120), using recursive and Patter Matching.
+9. Try to write functions that solve the factorial algorithm (5! = 5\*4\*3\*2\*1 = 120), using recursive and Pattern Matching.
 
 # Scripts
 
